@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎄Fortune Christmas🎄</title>
+    <link rel="icon" href="asset/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 배경 -->
+    <div class="background">
+      <h2 id="remain-time" style="color: #f4fa58"></h2>
+      <!-- 스노우볼 버튼-->
+      <button
+        id="show-popup"
+        style="background: none; border: none; padding: 0"
+      >
+        <img
+          src="asset/sonwGlobe.gif"
+          alt="Center Image"
+          class="center-image"
+        />
+      </button>
+      <!-- 산타 효과음 기능 -->
+      <audio id="click-sound">
+        <source src="asset/santaSound.mp3" type="audio/mp3" />
+        브라우저 버전이 적합하지 않아요😿
+      </audio>
+
+      <p class="sign">
+        🎅<span style="color: red; font-weight: bold">스노우볼</span>을
+        흔들어보시게!
+      </p>
+    </div>
+
+    <!-- 팝업창-->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="close-popup">&times;</span>
+        <h2>올해는 어떤 어린이였나요?</h2>
+        <p>키워드 5가지를 선택해보세요!</p>
+        <div id="keywords" class="keywords">
+          <!-- 키워드 버튼들이 동적으로 추가될 예정 -->
+        </div>
+        <button id="submit-keywords">나의 올해 모습 확인하기</button>
+        <p id="loading-message" style="display: none">🦌🎁 coming...</p>
+        <p id="result-message"></p>
+      </div>
+    </div>
+      </div>
+        <div id="message-popup" class="popup">
+        <div class="popup-content">
+        <span id="close-message-popup">&times;</span>
+        <p id="message-text">🎄크리스마스에만 열 수 있습니다! </p>
+      </div>
+    </div>
+  </div>
+
+    <!-- 음악 재생 -->
+    <div class="music-player">
+      <audio id="audio-player" controls autoplay>
+        <source src="asset/song1.mp3" type="audio/mp3" />
+        브라우저 버전이 적합하지 않아요😿
+      </audio>
+      <p id="playlist"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
